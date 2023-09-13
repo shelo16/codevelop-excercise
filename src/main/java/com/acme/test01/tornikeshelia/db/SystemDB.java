@@ -26,13 +26,6 @@ public class SystemDB {
         accounts.put(4L, new CurrentAccount(4L, "4", new BigDecimal(-5000), new BigDecimal(20000)));
     }
 
-    public static SystemDB getInstance() {
-        if (instance == null) {
-            instance = new SystemDB();
-        }
-        return instance;
-    }
-
     public Account getAccount(Long id) {
         return accounts.get(id);
     }
